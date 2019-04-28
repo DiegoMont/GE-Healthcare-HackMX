@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700" rel="stylesheet">
+    <title>Doctor</title>
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <style>
+        .datos {
+            height: 512px;
+            background-image: url("img/muse.png");
+            background-size: 810px auto;
+            background-position: -30px -110px;
+        }
+
+        .chat-yo {
+            color: #fff;
+            background-color: #3498DB;
+            display: inline-block;
+            border-radius: 0.9rem 0.9rem 0 0.9rem;
+            padding: 0.5rem 0.8rem;
+            justify-self: center;
+        }
+
+        #mensajes {
+            width: 80%;
+            background-color: hsl(160, 0%, 80%);
+            margin: 1rem auto;
+        }
+
+        #entrada {
+            font-size: 1rem;
+            display: block;
+            box-sizing: border-box;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        header {
+            background-color: #16A085;
+            padding: 40px 0;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="main-title">Dr. Emiliano Crespo</h1>
+    </header>
+    <div class="pantalla">
+            <div class="datos"></div>
+        <div id="mensajes">
+            <p class="mensaje-chat chat-yo">C&oacute;mo esta mi hijo?</p>
+            <input type="text" id="entrada">
+        </div>
+    </div>
+    <script>
+        document.getElementById("entrada").onkeyup = function(element){
+            if (element.target.value.toLowerCase() === "tb") {
+                element.target.value = "Todo bien";
+            }
+        };
+    </script>
+</body>
+
+</html>

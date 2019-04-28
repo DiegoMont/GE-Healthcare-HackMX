@@ -1,3 +1,5 @@
+localStorage.setItem("usuarios", '{"usersArray":[{"usuario":"d12345", "clave":"1234"},{"usuario":"p12345", "clave":"1234"}]}');
+
 function iniciarSesion(usuario) {
   localStorage.setItem("usuario", usuario);
 }
@@ -18,7 +20,20 @@ function buscarUsuario() {
     }
   }
    if(findUser){
-    return true;
+    let usuario = document.getElementById("user").value.toLowerCase();
+    if (usuario[0] === 'p') {
+      document.getElementById("submit").href="paciente-incubadora.html";
+      return true;
+    }
+    else if (usuario[0] === 'd') {
+      document.getElementById("submit").href = "inicio-doctor.html";
+      return true;
+    }
+    else {
+     document.getElementsByClassName("error")[0].classList.remove("ocultar");
+     return false;
+    }
+    
   } else {
     document.getElementsByClassName("error")[0].classList.remove("ocultar");
     return false;

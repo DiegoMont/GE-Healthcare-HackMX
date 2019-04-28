@@ -1,3 +1,20 @@
+body {
+  background-image: url(/img/healthcare.png);
+  background-position-x: -250px;
+}
+
+img{
+  display: block;
+  margin: auto;
+  margin-top: 100px;
+  width: 200px;
+}
+
+#title {
+  color: #23589b;
+  margin-bottom: 100px;
+}
+
 h1 {
   color: #000;
 }
@@ -51,7 +68,7 @@ label {
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
-  color: #fff;
+  color: #23589b;
   display: block;
   width: 170px;
   padding: 0.75rem 1.5rem;
@@ -60,8 +77,8 @@ label {
 }
 
 #submit:hover {
-  color: #fff;
-  background-color: #7f7f7f;
+  color: #23589b;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 350px) {
